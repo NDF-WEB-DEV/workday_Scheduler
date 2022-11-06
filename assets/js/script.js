@@ -4,8 +4,10 @@ var buttonEl = $('<btn>');
 $('<th>').addClass('th-element').css('text-align', 'right');
 var textArea = $('<textarea>').value;
 var textAreaEl = $('<textarea>').localStorage;
+var beginingTime = parseInt(moment("9","H").format("H"));
+var endTime = parseInt(moment("17","H").format("H"));
 var currentTime = parseInt(moment().format("H"));
-var futureTime = parseInt(moment().endOf('day').fromNow());
+// var futureTime = parseInt(moment().endOf('day').fromNow());
 // $('table th').text( moment("9", "hh").format('LT') );
 $('#row9').text( moment("9", "hh").format('LT'));
 $('#row10').text( moment("10", "hh").format('LT'));
@@ -41,6 +43,38 @@ var row2 = $('#row2');
 var row3 = $('#row3');
 var row4 = $('#row4');
 var row5 = $('#row5');
+
+// if(row9.currentTime != nineAm){
+//   $('textarea[id=txt9]').css({'background-color': '#F9F694', color: '#000000'});
+// } else if(row9.currentTime === nineAm) {
+//   $('textarea[id=txt9]').css({'background-color': '#F9F694', color: '#94D4F9'});
+// } else 
+
+// if(row1.currentTime === currentTime-1){
+//   $('textarea[id=txt1]').css({'background-color': '#F9F694', color: '#94D4F9'});
+// }
+
+
+// const button = document.querySelectorAll('button[id^=btn]');
+
+if(currentTime === currentTime){
+  $('textarea[id^=txt]').css({'background-color': '#F9F694', color: '#000000'});
+}
+
+if ((currentTime > beginingTime) && (currentTime < endTime)){
+  $('textarea[id=txt2]').css({'background-color': '#FF0000', color: '#ffffff'});
+}
+
+if ((currentTime < beginingTime) && (currentTime > endTime)){
+  $('textarea[id=txt2]').css({'background-color': '#00FF00', color: '#ffffff'});
+}
+
+console.log(beginingTime);
+console.log(endTime);
+console.log(currentTime);
+// console.log(nineAm);
+// console.log(row1);
+
 
 renderLastTaskAdded();
 
