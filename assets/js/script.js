@@ -4,9 +4,11 @@ var buttonEl = $('<btn>');
 $('<th>').addClass('th-element').css('text-align', 'right');
 var textArea = $('<textarea>').value;
 var textAreaEl = $('<textarea>').localStorage;
+
 var beginingTime = parseInt(moment("9","H").format("H"));
-var endTime = parseInt(moment("17","H").format("H"));
 var currentTime = parseInt(moment().format("H"));
+var endTime = parseInt(moment("17","H").format("H"));
+
 // var futureTime = parseInt(moment().endOf('day').fromNow());
 // $('table th').text( moment("9", "hh").format('LT') );
 $('#row9').text( moment("9", "hh").format('LT'));
@@ -21,6 +23,8 @@ $('#row5').text( moment("17", "hh").format('LT'));
 
 // Variable stores all clicks for the for each function by capturing all clicks in one variable
 const button = document.querySelectorAll('button[id^=btn]');
+
+
 
 //textareas
 var txt9TaskDislay = document.getElementById("txt9");
@@ -44,41 +48,26 @@ var row3 = $('#row3');
 var row4 = $('#row4');
 var row5 = $('#row5');
 
-// if(row9.currentTime != nineAm){
-//   $('textarea[id=txt9]').css({'background-color': '#F9F694', color: '#000000'});
-// } else if(row9.currentTime === nineAm) {
-//   $('textarea[id=txt9]').css({'background-color': '#F9F694', color: '#94D4F9'});
-// } else 
+// const rowColor = document.getElementsByClassName('rows');
+const rowColor = document.getElementById("tr[id^=txt");
+var currentHour = parseInt(moment().format('H'));
 
-// if(row1.currentTime === currentTime-1){
-//   $('textarea[id=txt1]').css({'background-color': '#F9F694', color: '#94D4F9'});
-// }
+  if (currentHour === rowColor){
+    $('textarea[id^=txt]').css({'background-color': 'red', color: 'white'});
+  } else if((currentHour < rowColor) && (currentHour > rowColor)) {
+    $('textarea[id^=txt]').css({'background-color': 'green', color: 'white'});
+  } else if((currentHour > rowColor) && (currentHour < rowColor)){
+    $('textarea[id^=txt]').css({'background-color': '#d3d3d3', color: 'white'});
+  } else {
+    $('textarea[id^=txt]').css({'background-color': 'white', color: 'black'});
+  }
 
-
-// const button = document.querySelectorAll('button[id^=btn]');
-
-if(currentTime === currentTime){
-  $('textarea[id^=txt]').css({'background-color': '#F9F694', color: '#000000'});
-}
-
-if ((currentTime > beginingTime) && (currentTime < endTime)){
-  $('textarea[id=txt2]').css({'background-color': '#FF0000', color: '#ffffff'});
-}
-
-if ((currentTime < beginingTime) && (currentTime > endTime)){
-  $('textarea[id=txt2]').css({'background-color': '#00FF00', color: '#ffffff'});
-}
-
-console.log(beginingTime);
-console.log(endTime);
-console.log(currentTime);
-// console.log(nineAm);
-// console.log(row1);
+console.log(currentHour);
 
 
 renderLastTaskAdded();
 
-// Savinf the entries to local storage
+// Saving entries to local storage
 function renderLastTaskAdded() {
   var txt9 = localStorage.getItem("txt9");
   var txt10 = localStorage.getItem("txt10");
