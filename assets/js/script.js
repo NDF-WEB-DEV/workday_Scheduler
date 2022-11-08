@@ -9,8 +9,6 @@ var beginingTime = parseInt(moment("9","H").format("H"));
 var currentTime = parseInt(moment().format("H"));
 var endTime = parseInt(moment("17","H").format("H"));
 
-// var futureTime = parseInt(moment().endOf('day').fromNow());
-// $('table th').text( moment("9", "hh").format('LT') );
 $('#row9').text( moment("9", "hh").format('LT'));
 $('#row10').text( moment("10", "hh").format('LT'));
 $('#row11').text( moment("11", "hh").format('LT'));
@@ -46,26 +44,19 @@ var row3 = $('#row3');
 var row4 = $('#row4');
 var row5 = $('#row5');
 
-// const rowColor = document.getElementsByClassName('rows');
-// const rowColor = document.("tr[id^=txt");
 var currentHour = parseInt(moment().format('H'));
-// currentHour = 17;
+
 $('.rows').each(function () {
   var rowColor = parseInt($(this).attr('id'));
-// console.log("current=", currentHour);
-// console.log("rowColor=", rowColor);
   if (currentHour === rowColor){
    $(this).addClass('present')
-    // $('textarea[id^=txt]').css({'background-color': 'red', color: 'white'});
   } else if((currentHour < rowColor)) {
     $(this).addClass('future')
     $(this).removeClass('present')
-    // $('textarea[id^=txt]').css({'background-color': 'green', color: 'white'});
   } else if((currentHour > rowColor)){
     $(this).addClass('past')
     $(this).removeClass('present')
     $(this).removeClass('future')
-    // $('textarea[id^=txt]').css({'background-color': '#d3d3d3', color: 'white'});
   }
 });
 
@@ -102,7 +93,7 @@ button.forEach(btn => {
   btn.addEventListener('click', event => {
     event.preventDefault
 
-    // Getting the values entered
+    // Getting the values entered by user
     var txt9 = document.getElementById("txt9").value;
     var txt10 = document.getElementById("txt10").value;
     var txt11 = document.getElementById("txt11").value;
