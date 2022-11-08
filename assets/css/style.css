@@ -10,6 +10,9 @@ body {
     resize: none;
     color: #000000;
     border-left: 1px solid black;
+    border-right: 1px solid black;
+    border-bottom: 1px solid white;
+    border-top: 1px solid black;
     padding: 10px;
     width: 100%;
     box-sizing: border-box;
@@ -40,13 +43,16 @@ body {
   }
   .th {
     text-align: right;
+  } 
+  .table .tbody .tr .th {
+    vertical-align: center;
   }
-  
   .hour {
     background-color: #ffffff;
     color: #000000;
     border-top: 1px dashed #000000;
     text-align: right;
+    margin-top: 10px;
   }
   
   .past {
@@ -71,12 +77,12 @@ body {
     background-color: #06aed5;
     color: white;
     display: block;
-    width: 50%;
+    width: 100%;
     padding: 14px 28px;
     font-size: 26px;
     cursor: pointer;
     text-align: center;
-    align-items: center;
+    align-items: right;
   }
 
   .btn i:hover {

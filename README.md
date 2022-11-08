@@ -3,6 +3,9 @@
 ### **Description**
 > #### This project creates is a daily calendar application to keep track of daily to dos with a time display of the work schedule form 9:00 am to 5:00 pm. The scheduler will display different colors for the rows depending on the present, past, and future time conditions.
 
+### **Project Image**
+[Screenshot of application](https://drive.google.com/file/d/1i_r7METG4H13ogtNf-Of5q6w6bRAMf8j/view?usp=sharing)
+
 ## **Table of Contents**
 - [Project Name](#project_name)
 - [How to install it](#installation)

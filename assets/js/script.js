@@ -24,8 +24,6 @@ $('#row5').text( moment("17", "hh").format('LT'));
 // Variable stores all clicks for the for each function by capturing all clicks in one variable
 const button = document.querySelectorAll('button[id^=btn]');
 
-
-
 //textareas
 var txt9TaskDislay = document.getElementById("txt9");
 var txt10TaskDislay = document.getElementById("txt10");
@@ -49,21 +47,29 @@ var row4 = $('#row4');
 var row5 = $('#row5');
 
 // const rowColor = document.getElementsByClassName('rows');
-const rowColor = document.getElementById("tr[id^=txt");
+// const rowColor = document.("tr[id^=txt");
 var currentHour = parseInt(moment().format('H'));
-
+// currentHour = 17;
+$('.rows').each(function () {
+  var rowColor = parseInt($(this).attr('id'));
+// console.log("current=", currentHour);
+// console.log("rowColor=", rowColor);
   if (currentHour === rowColor){
-    $('textarea[id^=txt]').css({'background-color': 'red', color: 'white'});
-  } else if((currentHour < rowColor) && (currentHour > rowColor)) {
-    $('textarea[id^=txt]').css({'background-color': 'green', color: 'white'});
-  } else if((currentHour > rowColor) && (currentHour < rowColor)){
-    $('textarea[id^=txt]').css({'background-color': '#d3d3d3', color: 'white'});
-  } else {
-    $('textarea[id^=txt]').css({'background-color': 'white', color: 'black'});
+   $(this).addClass('present')
+    // $('textarea[id^=txt]').css({'background-color': 'red', color: 'white'});
+  } else if((currentHour < rowColor)) {
+    $(this).addClass('future')
+    $(this).removeClass('present')
+    // $('textarea[id^=txt]').css({'background-color': 'green', color: 'white'});
+  } else if((currentHour > rowColor)){
+    $(this).addClass('past')
+    $(this).removeClass('present')
+    $(this).removeClass('future')
+    // $('textarea[id^=txt]').css({'background-color': '#d3d3d3', color: 'white'});
   }
+});
 
-console.log(currentHour);
-
+// console.log(currentHour);
 
 renderLastTaskAdded();
 
