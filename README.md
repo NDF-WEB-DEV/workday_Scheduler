@@ -11,6 +11,12 @@
 ### **Project Image**
 [Screenshot of application](https://drive.google.com/file/d/1i_r7METG4H13ogtNf-Of5q6w6bRAMf8j/view?usp=sharing)
 
+### **Deployed Website**
+[Link to Deployed Website](https://ndf-web-dev.github.io/workday_Scheduler/)
+
+### **GitHub Repo**
+[Link to GitHub Repo](https://github.com/NDF-WEB-DEV/workday_Scheduler)
+
 ## **Table of Contents**
 - [Project Name](#project_name)
 - [How to install it](#installation)
