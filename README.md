@@ -49,7 +49,7 @@ This is a school project
 ### **Credits**
 * [MDN Resources for Developers](https://developer.mozilla.org/en-US/)
 * [W3 Schools](https://www.w3schools.com/)
-* [Moment.js - Time Manipulation Library] (https://momentjs.com/)
+* [Moment.js - Time Manipulation Library](https://momentjs.com/)
 
 ### **License**
 none
